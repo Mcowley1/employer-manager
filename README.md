@@ -8,7 +8,7 @@
 
 ### Link
 [link](https://mcowley1.github.io/employer-manager/)
-![vidoe]()
+[video](https://drive.google.com/file/d/1Hmx8zzFiR4Mus38ZY_GvyA2KmPZ9Y1Ia/view)
 
 
 ### Summary
