@@ -1,4 +1,3 @@
-
 const inquirer = require("inquirer");
 const fs = require("fs");
 const cTable = require('console.table');
@@ -19,13 +18,13 @@ const connection = mysql.createConnection({
 });
 
 // with placeholder
-// connection.query(
-//     'SELECT * FROM `table` WHERE `name` = ? AND `age` > ?',
-//     ['Page', 45],
-//     function(err, results) {
-//       console.log(results);
-//     }
-//   );
+connection.query(
+    'SELECT * FROM `table` WHERE `name` = ? AND `age` > ?',
+    ['Page', 45],
+    function(err, results) {
+      console.log(results);
+    }
+  );
 
 connection.query = util.promisify(connection.query);
 
@@ -394,4 +393,5 @@ function updateByRole(employeeId, roleId) {
     byDepartment();
 
 }
+
 
