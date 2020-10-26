@@ -18,13 +18,17 @@ const connection = mysql.createConnection({
 });
 
 // with placeholder
-connection.query(
-    'SELECT * FROM `table` WHERE `name` = ? AND `age` > ?',
-    ['Page', 45],
-    function(err, results) {
-      console.log(results);
-    }
-  );
+connection.connect((err) => {
+    // if (err) {
+    //     console.log(err);
+    //     // res.status(500);
+    //     return res.send("There was an error connecting to the database.");
+    // } console.log("You're connected!");
+
+    // Function for inquirer to prompt data
+    runSearch();
+
+})
 
 connection.query = util.promisify(connection.query);
 
